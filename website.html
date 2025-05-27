@@ -6,26 +6,67 @@
     <meta name="robots" content="noindex, nofollow">
     <title>Navarath HS - Cybersecurity Professional</title>
     
-    <!-- Security Meta Tags -->
+    <!-- Enhanced Security Meta Tags -->
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
-        script-src 'self' https://cdnjs.cloudflare.com;
+        script-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';
         style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline';
         img-src 'self' data:;
         font-src 'self' https://cdnjs.cloudflare.com;
-        connect-src 'self';
+        connect-src 'self' https://forms.gle;
         frame-src 'none';
         object-src 'none';
-        base-uri 'self';
+        media-src 'none';
+        worker-src 'none';
+        manifest-src 'self';
         form-action 'self' https://forms.gle;
+        base-uri 'self';
+        require-trusted-types-for 'script';
+        trusted-types default;
         block-all-mixed-content;
+        upgrade-insecure-requests;
     ">
     
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <!-- Additional Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="no-referrer-when-downgrade">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+    <meta http-equiv="Cross-Origin-Resource-Policy" content="same-origin">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="Permissions-Policy" content="
+        accelerometer=(),
+        ambient-light-sensor=(),
+        autoplay=(),
+        camera=(),
+        encrypted-media=(),
+        fullscreen=(),
+        geolocation=(),
+        gyroscope=(),
+        magnetometer=(),
+        microphone=(),
+        midi=(),
+        payment=(),
+        picture-in-picture=(),
+        speaker=(),
+        usb=(),
+        vr=()
+    ">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="x-dns-prefetch-control" content="off">
     
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
+    <!-- Font Awesome for icons with SRI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
     
     <style>
         :root {
@@ -356,13 +397,13 @@
            
             <!-- Social Media Buttons -->
             <div class="social-buttons">
-                <a href="mailto:navarath2011@gmail.com" class="social-btn" target="_blank" rel="noopener noreferrer">
+                <a href="mailto:navarath2011@gmail.com" class="social-btn" target="_blank" rel="noopener noreferrer nofollow">
                     <i class="fas fa-envelope" aria-hidden="true"></i> Mail
                 </a>
-                <a href="https://www.linkedin.com/in/navarath-hs" class="social-btn" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/navarath-hs" class="social-btn" target="_blank" rel="noopener noreferrer nofollow">
                     <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
                 </a>
-                <a href="https://hackerone.com/n_tech?type=user" class="social-btn" target="_blank" rel="noopener noreferrer">
+                <a href="https://hackerone.com/n_tech?type=user" class="social-btn" target="_blank" rel="noopener noreferrer nofollow">
                     <i class="fas fa-bug" aria-hidden="true"></i> HackerOne
                 </a>
             </div>
@@ -387,9 +428,9 @@ pvt ltd at just 13 years old. I am Skilled in ethical hacking, bug hunting, and 
                 </p>
                 
                 <div class="button-container">
-                    <a href="https://navarath-hs.my.canva.site/my-portfolio" target="_blank" rel="noopener noreferrer" class="btn">Portfolio</a>
-                    <a href="https://navarath-hs.my.canva.site/my-resume" target="_blank" rel="noopener noreferrer" class="btn">Resume</a>
-                    <a href="https://forms.gle/fH9yxiaamrLHuYrc9" target="_blank" rel="noopener noreferrer" class="btn">Contact</a>
+                    <a href="https://navarath-hs.my.canva.site/my-portfolio" target="_blank" rel="noopener noreferrer nofollow" class="btn">Portfolio</a>
+                    <a href="https://navarath-hs.my.canva.site/my-resume" target="_blank" rel="noopener noreferrer nofollow" class="btn">Resume</a>
+                    <a href="https://forms.gle/fH9yxiaamrLHuYrc9" target="_blank" rel="noopener noreferrer nofollow" class="btn" data-csrf-token="secure-token-12345">Contact</a>
                 </div>
             </section>
         </main>
@@ -428,11 +469,7 @@ pvt ltd at just 13 years old. I am Skilled in ethical hacking, bug hunting, and 
             try {
                 if (document.documentElement.outerHTML !== originalHTML && !securityViolationDetected) {
                     securityViolationDetected = true;
-                    const alert = document.getElementById('securityAlert');
-                    if (alert) {
-                        alert.style.display = 'block';
-                        alert.setAttribute('aria-live', 'assertive');
-                    }
+                    showSecurityAlert('DOM tampering detected');
                     document.body.style.filter = 'blur(5px)';
                     throw new Error('DOM tampering detected');
                 }
@@ -440,13 +477,44 @@ pvt ltd at just 13 years old. I am Skilled in ethical hacking, bug hunting, and 
                 // Security violation detected
                 if (!securityViolationDetected) {
                     securityViolationDetected = true;
-                    const alert = document.getElementById('securityAlert');
-                    if (alert) {
-                        alert.style.display = 'block';
-                        alert.setAttribute('aria-live', 'assertive');
-                    }
+                    showSecurityAlert('Security violation detected');
                     document.body.style.filter = 'blur(5px)';
                 }
+            }
+        }
+        
+        // Detect browser extensions tampering with the page
+        window.addEventListener('DOMNodeInserted', function(e) {
+            if (e.target.tagName === 'SCRIPT' && !e.target.hasAttribute('src') && 
+                !e.target.hasAttribute('nonce')) {
+                securityViolationDetected = true;
+                showSecurityAlert('Unauthorized script injection detected');
+            }
+        });
+
+        // Protect against console tampering
+        if (typeof console !== 'undefined') {
+            console.log = function() {
+                throw new Error('Console logging disabled for security');
+            };
+        }
+
+        // Detect iframe injection attempts
+        document.addEventListener('DOMNodeInserted', function(e) {
+            if (e.target.tagName === 'IFRAME') {
+                securityViolationDetected = true;
+                showSecurityAlert('Unauthorized iframe injection detected');
+                e.target.remove();
+            }
+        });
+
+        function showSecurityAlert(message) {
+            const alert = document.getElementById('securityAlert');
+            if (alert) {
+                alert.textContent = message;
+                alert.style.display = 'block';
+                alert.setAttribute('aria-live', 'assertive');
+                document.body.style.filter = 'blur(5px)';
             }
         }
         
@@ -527,15 +595,7 @@ pvt ltd at just 13 years old. I am Skilled in ethical hacking, bug hunting, and 
                     (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || 
                     (e.ctrlKey && e.key === 'u')) {
                     e.preventDefault();
-                    const alert = document.getElementById('securityAlert');
-                    if (alert) {
-                        alert.textContent = 'Developer tools access blocked for security';
-                        alert.style.display = 'block';
-                        alert.setAttribute('aria-live', 'assertive');
-                        setTimeout(() => {
-                            alert.style.display = 'none';
-                        }, 3000);
-                    }
+                    showSecurityAlert('Developer tools access blocked for security');
                 }
             });
             

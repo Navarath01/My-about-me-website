@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Navarath HS - Cybersecurity Professional</title>
+    
+    <!-- Security Meta Tags -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' https://cdnjs.cloudflare.com;
+        style-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline';
+        img-src 'self' data:;
+        font-src 'self' https://cdnjs.cloudflare.com;
+        connect-src 'self';
+        frame-src 'none';
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self' https://forms.gle;
+        block-all-mixed-content;
+    ">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #172a45;
+            --accent: #64ffda;
+            --text-primary: #ccd6f6;
+            --text-secondary: #8892b0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+        
+        body {
+            background-color: var(--primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+            background-color: var(--secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin: 0 auto 1.5rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+        
+        .pronouns {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+        
+        .title span {
+            display: block;
+        }
+        
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .social-btn {
+            padding: 0.6rem 1.2rem;
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 5px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .social-btn:hover,
+        .social-btn:focus {
+            background-color: rgba(100, 255, 218, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(100, 255, 218, 0.2);
+            outline: none;
+        }
+        
+        .social-btn i {
+            font-size: 1rem;
+        }
+        
+        .about-section {
+            background-color: var(--secondary);
+            padding: 2rem;
+            border-radius: 5px;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background-color: var(--accent);
+        }
+        
+        h2 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            padding: 0.8rem 1.8rem;
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn:hover,
+        .btn:focus {
+            background-color: rgba(100, 255, 218, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+            outline: none;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .matrix-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .secure-badge {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--secondary);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+        }
+        
+        .secure-badge::before {
+            content: '🔒';
+            margin-right: 0.5rem;
+        }
+        
+        #securityAlert {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ff0000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            z-index: 1000;
+            font-weight: bold;
+        }
+        
+        /* Skip to content link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .title {
+                font-size: 1rem;
+            }
+            
+            .social-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .social-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .about-section {
+                padding: 1.5rem;
+            }
+            
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .secure-badge {
+                bottom: 10px;
+                right: 10px;
+                font-size: 0.7rem;
+                padding: 0.3rem 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div id="securityAlert" role="alert">Security Alert: Unauthorized activity detected!</div>
+    <div class="matrix-effect" id="matrix" aria-hidden="true"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo" aria-hidden="true">N</div>
+            <h1>Navarath HS</h1>
+            <div class="pronouns">(he/him)</div>
+            <div class="title">
+                <span>Ethical Hacker | Bug Hunter | Penetration</span>
+                <span>Tester | Cyber Security</span>
+            </div>
+           
+            <!-- Social Media Buttons -->
+            <div class="social-buttons">
+                <a href="mailto:navarath2011@gmail.com" class="social-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-envelope" aria-hidden="true"></i> Mail
+                </a>
+                <a href="https://www.linkedin.com/in/navarath-hs" class="social-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+                </a>
+                <a href="https://hackerone.com/n_tech?type=user" class="social-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-bug" aria-hidden="true"></i> HackerOne
+                </a>
+            </div>
+        </header>
+        
+        <main id="main-content">
+            <section class="about-section" aria-labelledby="about-title">
+                <h2 id="about-title">About Me</h2>
+                <p>
+                    I'm Navarath (@N-Tech01), a passionate young cybersecurity enthusiast and I worked as a Penetration Tester at Nithra Apps India Pvt Ltd and Subiksham software solutions
+pvt ltd at just 13 years old. I am Skilled in ethical hacking, bug hunting, and penetration testing.
+                </p>
+                <p>
+                    Studying Class IX at The Indian Public School, Erode, while pursuing an ethical hacking course at CADD Centre Livewire and learning continuously on platforms like YouTube.
+                </p>
+                <p>
+                    I've responsibly reported critical vulnerabilities via HackerOne and Cert-in. My aim is to a save digital world.
+                </p>
+                <p>
+                    Hey, check out my portfolio and resume! If you'd like to get in touch, feel free to contact
+                    me via LinkedIn or by filling out the contact form.
+                </p>
+                
+                <div class="button-container">
+                    <a href="https://navarath-hs.my.canva.site/my-portfolio" target="_blank" rel="noopener noreferrer" class="btn">Portfolio</a>
+                    <a href="https://navarath-hs.my.canva.site/my-resume" target="_blank" rel="noopener noreferrer" class="btn">Resume</a>
+                    <a href="https://forms.gle/fH9yxiaamrLHuYrc9" target="_blank" rel="noopener noreferrer" class="btn">Contact</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer>
+        &copy; <span id="currentYear"></span> All rights reserved by Navarath HS
+    </footer>
+    
+    <div class="secure-badge" aria-hidden="true">
+        Secure Connection
+    </div>
+    
+    <script>
+        // Enable strict mode for better JavaScript security
+        "use strict";
+        
+        // Protect against prototype pollution
+        if (typeof Object.freeze === 'function') {
+            Object.freeze(Object.prototype);
+            Object.freeze(Array.prototype);
+        }
+        
+        // Security monitoring variables
+        const originalHTML = document.documentElement.outerHTML;
+        let securityViolationDetected = false;
+        
+        // Frame busting with enhanced protection
+        if (self !== top || window.location !== window.parent.location) {
+            document.body.innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #0a192f; color: #64ffda; font-family: monospace; padding: 2rem; text-align: center;">Frame loading blocked for security reasons. Please open this page directly.</div>';
+            throw new Error("Frame busting security violation");
+        }
+        
+        // DOM tampering protection
+        function checkForTampering() {
+            try {
+                if (document.documentElement.outerHTML !== originalHTML && !securityViolationDetected) {
+                    securityViolationDetected = true;
+                    const alert = document.getElementById('securityAlert');
+                    if (alert) {
+                        alert.style.display = 'block';
+                        alert.setAttribute('aria-live', 'assertive');
+                    }
+                    document.body.style.filter = 'blur(5px)';
+                    throw new Error('DOM tampering detected');
+                }
+            } catch (e) {
+                // Security violation detected
+                if (!securityViolationDetected) {
+                    securityViolationDetected = true;
+                    const alert = document.getElementById('securityAlert');
+                    if (alert) {
+                        alert.style.display = 'block';
+                        alert.setAttribute('aria-live', 'assertive');
+                    }
+                    document.body.style.filter = 'blur(5px)';
+                }
+            }
+        }
+        
+        // Set up periodic security checks
+        if (typeof setInterval === 'function') {
+            setInterval(checkForTampering, 1000);
+        }
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            const yearElement = document.getElementById('currentYear');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+            
+            // Matrix effect
+            const matrix = document.getElementById('matrix');
+            if (matrix) {
+                const matrixCanvas = document.createElement('canvas');
+                matrix.appendChild(matrixCanvas);
+                
+                matrixCanvas.width = matrix.clientWidth;
+                matrixCanvas.height = matrix.clientHeight;
+                
+                const ctx = matrixCanvas.getContext('2d');
+                const width = matrixCanvas.width;
+                const height = matrixCanvas.height;
+                
+                const chars = "01";
+                const fontSize = 14;
+                const columns = width / fontSize;
+                
+                const drops = [];
+                for (let i = 0; i < columns; i++) {
+                    drops[i] = 1;
+                }
+                
+                function draw() {
+                    ctx.fillStyle = 'rgba(10, 25, 47, 0.05)';
+                    ctx.fillRect(0, 0, width, height);
+                    
+                    ctx.fillStyle = '#64ffda';
+                    ctx.font = fontSize + 'px monospace';
+                    
+                    for (let i = 0; i < drops.length; i++) {
+                        const text = chars.charAt(Math.floor(Math.random() * chars.length));
+                        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                        
+                        if (drops[i] * fontSize > height && Math.random() > 0.975) {
+                            drops[i] = 0;
+                        }
+                        
+                        drops[i]++;
+                    }
+                }
+                
+                let matrixInterval;
+                if (typeof setInterval === 'function') {
+                    matrixInterval = setInterval(draw, 33);
+                }
+                
+                window.addEventListener('resize', function() {
+                    matrixCanvas.width = matrix.clientWidth;
+                    matrixCanvas.height = matrix.clientHeight;
+                });
+            }
+            
+            // Context menu prevention
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+            });
+            
+            // Key event restrictions
+            document.addEventListener('keydown', function(e) {
+                // Block F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C, Ctrl+U
+                if ((e.key === 'F12') || 
+                    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || 
+                    (e.ctrlKey && e.key === 'u')) {
+                    e.preventDefault();
+                    const alert = document.getElementById('securityAlert');
+                    if (alert) {
+                        alert.textContent = 'Developer tools access blocked for security';
+                        alert.style.display = 'block';
+                        alert.setAttribute('aria-live', 'assertive');
+                        setTimeout(() => {
+                            alert.style.display = 'none';
+                        }, 3000);
+                    }
+                }
+            });
+            
+            // Security cookie for HTTPS sessions
+            if (window.location.protocol === 'https:' && typeof document.cookie !== 'undefined') {
+                document.cookie = __Secure-flag=1; Secure; SameSite=Strict; path=/; max-age=3600;
+            }
+        });
+    </script>
+</body>
+</html>
